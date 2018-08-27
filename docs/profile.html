@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-0">
+    <div class="container">
+    <a href="index.html" class="navbar-brand">Logo</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar"><span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav" >
+      <li class="nav-item px-3">
+        <a href="index.html" class="nav-link">Dashboard</a>
+      </li>
+      <li class="nav-item px-3">
+        <a href="posts.html" class="nav-link">Posts</a>
+      </li>
+      <li class="nav-item px-3">
+        <a href="categoris.html" class="nav-link">Categories</a>
+      </li>
+      <li class="nav-item px-3">
+          <a href="users.html" class="nav-link">Users</a>
+        </li>
+      
+
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mr-3 dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-user"></i> Welcome Ahmed
+        </a>
+        <div class="dropdown-menu">
+          <a href="profile.html" class="dropdown-item">
+          <i class="fa fa-user-circle"></i>  Profile
+          </a>
+          <a href="settings.html" class="dropdown-item">
+            <i class="fa fa-cog"></i>  Settings
+          </a>
+          <a href="loging.html" class="dropdown-item">
+            <i class="fa fa-user-times"></i>  Logout
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+  </nav>
+
+  <header id="main-header" class="py-3 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1><i class="fa fa-user"></i> Profile</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Actions section -->
+
+  <section id="action" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mr-auto">
+          <a href="index.html" class="btn btn-light btn-block">
+            <i class="fa fa-arrow-left"></i> Back to dashboard
+          </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#passModal">
+              <i class="fa fa-lock"></i>  Change Password
+            </a>
+          </div>
+          <div class="col-md-3">
+              <a href="#" class="btn btn-danger btn-block">
+                <i class="fa fa-remove"></i> Delete Account
+              </a>
+            </div>   
+      </div>
+    </div>
+  </section>
+
+<!-- Profile Edit -->
+  <section id="profile">
+      <div class="container">
+        <div class="row">
+        <div class="col">
+         <div class="card">
+           <div class="card-header">
+             <h4>Edit Profile</h4>
+           </div>
+           <div class="card-body">
+               <form>
+                 <div class="form-group">
+                   <label for="name">Name</label>
+                   <input type="text" id="title" class="form-control" value="Ahmed Ali"> 
+                 </div>
+                 <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="title" class="form-control" value="abde@test.com"> 
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea name="editor1" class="form-control" id="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit porro voluptates dolorem quis? Sequi quibusdam odio enim modi! Ducimus sunt harum veniam culpa itaque id esse eius porro! Optio quis, quae in libero ipsa magnam nam itaque repellendus labore!</textarea>
+                </div>  
+               </form>
+           </div>
+         </div>
+        </div>
+        <div class="col-md-3 text-center text-muted justify-content-center">
+          <h3>Your Avatar</h3>
+          <img src="img/avatar.png" alt="" class="d-block img-fluid mx-auto mb-2">
+          <button class="btn btn-primary btn-block">Edit Image</button>
+          <button class="btn btn-danger btn-block">Delete Image</button>
+        </div>
+       </div>
+      </div>
+     
+     </section>
+     
+     <footer id="main-footer" class="bg-dark text-center text-white mt-5 p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p class="lead text-center text-muted">Copyright &copy; 2018</p>
+            </div>
+          </div>
+        </div>
+      </footer>  
+
+
+<!-- Password Modal -->
+<div class="modal fade" id="passModal" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-white">
+        <h5 class="modal-title">Change password</h5>
+        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="form-group">
+            <label for="password2">Confirm password</label>
+            <input type="password" class="form-control" id="password2">
+        </div>
+      
+     
+
+
+          </form>     
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">Close</button>
+        <button class="btn btn-warning" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>         
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+  <script>
+			CKEDITOR.replace( 'editor1' );
+		</script>
+</body>
+</html>
